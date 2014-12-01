@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "daedalus_control")
+set(daedalus_control_MAINTAINER "kaus <kaus@todo.todo>")
+set(daedalus_control_DEPRECATED "")
+set(daedalus_control_VERSION "0.0.0")
+set(daedalus_control_BUILD_DEPENDS "ros_control" "ros_controllers")
+set(daedalus_control_RUN_DEPENDS "ros_control" "ros_controllers")
+set(daedalus_control_BUILDTOOL_DEPENDS "catkin")

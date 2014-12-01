@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "daedalus_description")
+set(daedalus_description_MAINTAINER "root <root@todo.todo>")
+set(daedalus_description_DEPRECATED "")
+set(daedalus_description_VERSION "0.0.0")
+set(daedalus_description_BUILD_DEPENDS )
+set(daedalus_description_RUN_DEPENDS )
+set(daedalus_description_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "daedalus_gazebo")
+set(daedalus_gazebo_MAINTAINER "root <root@todo.todo>")
+set(daedalus_gazebo_DEPRECATED "")
+set(daedalus_gazebo_VERSION "0.0.0")
+set(daedalus_gazebo_BUILD_DEPENDS )
+set(daedalus_gazebo_RUN_DEPENDS )
+set(daedalus_gazebo_BUILDTOOL_DEPENDS "catkin")

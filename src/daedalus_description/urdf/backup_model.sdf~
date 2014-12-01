@@ -1,0 +1,283 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+<model name="my_model">
+  <pose>0 0 0 0 0 0 0</pose>
+  <static>false</static>
+      <link name="ankle">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+	<pose> 32.74125 34.38775 3.91667 0 0 0</pose>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+        <mass>1.0</mass>
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/ankle.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/ankle.dae</uri>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+      <link name="thigh">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+        <mass>1.0</mass>
+	<pose> 32.7638 33.54975 8.004685 0 0 0</pose>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/thigh.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/thigh.dae</uri>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+      <link name="shin">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+	<pose> 32.7638 32.95155 5.872325 0 0 0</pose>
+        <mass>1.0</mass>
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/shin.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/shin.dae</uri>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+      <link name="foot">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+	<pose> 32.7145 34.6975 3.42454 0 0 0</pose>
+        <mass>1.0</mass>
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/foot.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/foot.dae</uri>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+      <link name="hip">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+        <mass>1.0</mass>
+	<pose> 33.05005 35.0104 6.651805 0 0 0</pose>
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/hip.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/hip.dae</uri>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+      <link name="pelvis">
+         <pose>-30 -38 0 0 0 0</pose>
+	<inertial>
+	<pose> 35.09332 35.03066 5.84725 0 0 0</pose>
+        <mass>1.0</mass>
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/pelvis.dae</uri>
+               </mesh>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <mesh>
+                  <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/pelvis.dae</uri>
+      
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+	<link name="torso">
+         <pose>10.8985 -7.03095 3.5 0 0 0</pose>
+	<inertial>
+        <mass>10.0</mass>  
+	<pose> 0 0 0 0 0 0</pose>      
+	<inertia> 
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.083</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.083</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.083</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz> 
+        </inertia> 
+      </inertial>
+         <collision name="collision">
+            <geometry>
+               <box>
+                  <size>10 10 7</size>
+               </box>
+            </geometry>
+         </collision>
+         <visual name="visual">
+            <geometry>
+               <box>
+                  <size>10 10 7</size>
+               </box>
+            </geometry>
+         </visual>
+      </link>
+	<joint type="revolute" name="pelvis_torse">
+		<pose>0 4 3.54768 0 0 0</pose>
+		<child>torso</child>
+		<parent>pelvis</parent>
+		<axis>
+		 <limit>
+		  <lower>0</lower>
+		  <upper>0</upper>
+		</limit>
+		  <xyz>1 0 0</xyz>
+		</axis>
+      </joint>
+	<joint type="revolute" name="ankle_foot">
+		<pose>32.7371 0 3.4214 0 0 0</pose>
+		<child>foot</child>
+		<parent>ankle</parent>
+		<axis>
+		  <xyz>0 1 0</xyz>
+	<dynamics>
+          <damping>0.200000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <limit>
+          <lower>-10000000000000000.000000</lower>
+          <upper>10000000000000000.000000</upper>
+          <effort>0.000000</effort>
+          <velocity>4.000000</velocity>
+        </limit>
+		</axis>
+      </joint>
+	<joint type="revolute" name="ankle_shin">
+		<pose>0 33.4677 4.40879 0 0 0</pose>
+		<child>shin</child>
+		<parent>ankle</parent>
+		<axis>
+		  <xyz>1 0 0</xyz>
+		</axis>
+      </joint>
+	<joint type="revolute" name="thigh_shin">
+		<pose>0 32.7899 7.33586 0 0 0</pose>
+		<child>shin</child>
+		<parent>thigh</parent>
+		<axis>
+		  <xyz>1 0 0</xyz>
+		</axis>
+      </joint>
+	<joint type="revolute" name="thigh_hip">
+		<pose>0 35.0104 8.15475 0 0 0</pose>
+		<child>hip</child>
+		<parent>thigh</parent>
+		<axis>
+		  <xyz>1 0 0</xyz>
+		</axis>
+      </joint>
+	<joint type="revolute" name="hip_pelvis">
+		<pose>34.0351 35.0309 0 0 0 0</pose>
+		<child>pelvis</child>
+		<parent>hip</parent>
+		<axis>
+		  <xyz>0 0 1</xyz>
+	<dynamics>
+          <damping>0.200000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <limit>
+          <lower>-10000000000000000.000000</lower>
+          <upper>10000000000000000.000000</upper>
+          <effort>0.000000</effort>
+          <velocity>4.000000</velocity>
+        </limit>
+		</axis>
+      </joint>
+  </model>
+</sdf>

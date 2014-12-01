@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<robot name="daedalus">    
+    <static>false</static>
+    <link name="leg1link0">
+      <self_collide>1</self_collide>
+      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
+      <inertial>
+        <pose>0.892683838 1.03151079 0.148531107 0 0 0</pose>
+        <mass>4.72639954</mass>
+        <inertia> 
+          <ixx>3.76702192</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>5.02939053</iyy>
+          <iyz>0</iyz>
+          <izz>0.104767786</izz> 
+        </inertia> 
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link0.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+       <visual name="visual">
+          <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link0.dae</uri>
+          </mesh>
+          </geometry>
+       </visual>
+    </link>
+    <link name="leg1link1">
+      <self_collide>1</self_collide>
+      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
+      <inertial>
+        <pose>0.837170246 1.0317214 0.161524277 0 0 0</pose>
+        <mass> 6.23121787</mass>
+        <inertia> 
+          <ixx>4.36786663</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>6.63326988</iyy>
+          <iyz>0</iyz>
+          <izz>0.164683289</izz> 
+        </inertia> 
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link> 
+    <link name="leg1link2">
+      <self_collide>1</self_collide>
+      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
+      <inertial>
+        <pose>0.832200686 1.07493617 0.207757883 0 0 0</pose>
+        <mass>7.32147232</mass>
+        <inertia> 
+          <ixx>5.071313</ixx> 
+          <ixy>0</ixy> 
+          <ixz>0</ixz>
+          <iyy>8.46231008</iyy>
+          <iyz>0</iyz>
+          <izz>0.316663829</izz> 
+        </inertia> 
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+        <joint type="revolute" name="leg1joint0">
+      <pose>0 1.03151 0.148531 0 0 0</pose>
+      <child>leg1link0</child>
+      <parent>chasis</parent>
+      <axis>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      <xyz>1 0 0</xyz>
+      </axis>
+    </joint>
+    <joint type="revolute" name="leg1joint1">
+      <pose>0.86449 1.03151 0 0 0 0</pose>
+      <child link="leg1link0"/>
+      <parent link="leg1link1"/>"
+      <axis>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <friction>5</friction>
+        </dynamics>
+        <limit>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>160</effort>
+        </limit>
+      </axis>
+    </joint>
+    <joint type="revolute" name="leg1joint2">
+      <pose>0 1.03203 0.207131 0 0 0</pose>
+      <child link="leg1link1"/>
+      <parent link="leg1link2"/>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <dynamics>
+          <damping>5</damping>
+          <friction>5</friction>
+        </dynamics>
+        <limit>
+          <lower>-3.72</lower>
+          <upper>0.58</upper>
+          <effort>10</effort>
+        </limit>        
+      </axis>
+    </joint>
+</robot>
