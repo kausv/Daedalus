@@ -1,139 +1,128 @@
 <?xml version='1.0'?>
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/rrbot</robotNamespace>
+  </plugin>
+</gazebo>
+<gazebo>
+  <plugin name="ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/rrbot</robotNamespace>
+  </plugin>
+</gazebo>
+<transmission name="tran1">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="leg1joint1"/>
+  <actuator name="motor1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="tran2">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="leg1joint2"/>
+  <actuator name="motor2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
 <robot name="daedalus">    
-    <static>false</static>
-    <link name="leg1link0">
-      <self_collide>1</self_collide>
-      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
+    <link name="chasis">
       <inertial>
-        <pose>0.892683838 1.03151079 0.148531107 0 0 0</pose>
-        <mass>4.72639954</mass>
-        <inertia> 
-          <ixx>3.76702192</ixx> 
-          <ixy>0</ixy> 
-          <ixz>0</ixz>
-          <iyy>5.02939053</iyy>
-          <iyz>0</iyz>
-          <izz>0.104767786</izz> 
-        </inertia> 
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <mass value="100"/>
+        <inertia ixx="0.083" ixy="0.083" ixz="0.083" iyy="0.083" iyz="0.083" izz="0.083"/>
       </inertial>
       <collision name="collision">
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
         <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link0.dae</uri>
-          </mesh>
+          <box size="0.25 0.25 0.2"/>
         </geometry>
       </collision>
        <visual name="visual">
-          <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link0.dae</uri>
-          </mesh>
-          </geometry>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.25 0.25 0.2"/>
+        </geometry>
        </visual>
     </link>
-    <link name="leg1link1">
-      <self_collide>1</self_collide>
-      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
+    <link name="leg1link0">
       <inertial>
-        <pose>0.837170246 1.0317214 0.161524277 0 0 0</pose>
-        <mass> 6.23121787</mass>
-        <inertia> 
-          <ixx>4.36786663</ixx> 
-          <ixy>0</ixy> 
-          <ixz>0</ixz>
-          <iyy>6.63326988</iyy>
-          <iyz>0</iyz>
-          <izz>0.164683289</izz> 
-        </inertia> 
+        <origin xyz="0.892683838 1.03151079 0.148531107" rpy="0 0 0"/>
+          <mass value="4.72639954"/>
+        <inertia ixx="3.76702192" ixy="0" ixz="0" iyy="5.02939053" iyz="0" izz="0.104767786"/>
       </inertial>
       <collision name="collision">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link1.dae</uri>
-          </mesh>
+          <mesh filename="package://daedalus_description/meshes/link0.dae"/>
         </geometry>
       </collision>
       <visual name="visual">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link1.dae</uri>
-          </mesh>
+          <mesh filename="package://daedalus_description/meshes/link0.dae"/>
+        </geometry>
+      </visual>
+    </link>
+    <link name="leg1link1">
+      <inertial>
+        <origin xyz="0.837170246 1.0317214 0.161524277" rpy="0 0 0"/>
+        <mass value="6.23121787"/>
+        <inertia ixx="4.36786663" ixy="0" ixz="0" iyy="6.63326988" iyz="0" izz="0.164683289"/>
+      </inertial>
+      <collision name="collision">
+        <origin xyz="-0.86 -1.03 -0.17" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://daedalus_description/meshes/link1.dae"/>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <origin xyz="-0.86 -1.03 -0.17" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://daedalus_description/meshes/link1.dae"/>
         </geometry>
       </visual>
     </link> 
     <link name="leg1link2">
       <self_collide>1</self_collide>
-      <pose>-0.892683838 -1.03151079 0 0 0 0</pose>
       <inertial>
-        <pose>0.832200686 1.07493617 0.207757883 0 0 0</pose>
-        <mass>7.32147232</mass>
-        <inertia> 
-          <ixx>5.071313</ixx> 
-          <ixy>0</ixy> 
-          <ixz>0</ixz>
-          <iyy>8.46231008</iyy>
-          <iyz>0</iyz>
-          <izz>0.316663829</izz> 
-        </inertia> 
+        <origin xyz="-0.017799314 0.04493617  -0.002242117" rpy="0 0 0"/>
+        <mass value="7.32147232"/>
+        <inertia ixx="5.071313" ixy="0" ixz="0" iyy="8.46231008" iyz="0" izz="0.316663829"/>
       </inertial>
       <collision name="collision">
+        <origin xyz="-0.85 -1.03 -0.21" rpy="0 0 0"/>
         <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link2.dae</uri>
-          </mesh>
+          <mesh filename="package://daedalus_description/meshes/link2.dae"/>
         </geometry>
       </collision>
       <visual name="visual">
+        <origin xyz="-0.85 -1.03 -0.21" rpy="0 0 0"/>
         <geometry>
-          <mesh>
-            <uri>file:///home/kaus/catkin_ws/src/daedalus_description/meshes/link2.dae</uri>
-          </mesh>
+          <mesh filename="package://daedalus_description/meshes/link2.dae"/>
         </geometry>
       </visual>
     </link>
-        <joint type="revolute" name="leg1joint0">
-      <pose>0 1.03151 0.148531 0 0 0</pose>
-      <child>leg1link0</child>
-      <parent>chasis</parent>
-      <axis>
-        <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-        </limit>
-      <xyz>1 0 0</xyz>
-      </axis>
+    <joint type="fixed" name="leg1joint0">
+      <origin xyz="-1.035 -1.125 0" rpy="0 0 0"/>
+      <child link="leg1link0"/>
+      <parent link="chasis"/>
+      <axis xyz="1 0 0"/>
     </joint>
     <joint type="revolute" name="leg1joint1">
-      <pose>0.86449 1.03151 0 0 0 0</pose>
-      <child link="leg1link0"/>
-      <parent link="leg1link1"/>"
-      <axis>
-        <xyz>0 0 1</xyz>
-        <dynamics>
-          <friction>5</friction>
-        </dynamics>
-        <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
-          <effort>160</effort>
-        </limit>
-      </axis>
+      <origin xyz="0.86 1.03 0.17" rpy="0 0 0"/>
+      <child link="leg1link1"/>
+      <parent link="leg1link0"/>"
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.57" upper="1.57" effort="10" velocity="0.5"/>
     </joint>
     <joint type="revolute" name="leg1joint2">
-      <pose>0 1.03203 0.207131 0 0 0</pose>
-      <child link="leg1link1"/>
-      <parent link="leg1link2"/>
-      <axis>
-        <xyz>1 0 0</xyz>
-        <dynamics>
-          <damping>5</damping>
-          <friction>5</friction>
-        </dynamics>
-        <limit>
-          <lower>-3.72</lower>
-          <upper>0.58</upper>
-          <effort>10</effort>
-        </limit>        
-      </axis>
+      <origin xyz="-0.01 0 0.04" rpy="0 0 0"/>
+      <child link="leg1link2"/>
+      <parent link="leg1link1"/>
+      <axis xyz="1 0 0"/>
+      <limit lower="-0.45" upper="3.59" effort="10" velocity="0.5"/>
     </joint>
 </robot>

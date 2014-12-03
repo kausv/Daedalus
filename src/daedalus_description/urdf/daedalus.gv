@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"chasis" [label="chasis"];
+"leg1link0" [label="leg1link0"];
+"leg1link1" [label="leg1link1"];
+"leg1link2" [label="leg1link2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"chasis" -> "leg1joint0" [label="xyz: 0 1.03151 0.148531 \nrpy: 0 -0 0"]
+"leg1joint0" -> "leg1link0"
+"leg1link0" -> "leg1joint1" [label="xyz: 0.86449 1.03151 0 \nrpy: 0 -0 0"]
+"leg1joint1" -> "leg1link1"
+"leg1link1" -> "leg1joint2" [label="xyz: 0 1.03203 0.207131 \nrpy: 0 -0 0"]
+"leg1joint2" -> "leg1link2"
+}
