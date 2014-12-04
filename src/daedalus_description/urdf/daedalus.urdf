@@ -1,33 +1,27 @@
 <?xml version='1.0'?>
-<gazebo>
-  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-    <robotNamespace>/rrbot</robotNamespace>
-  </plugin>
-</gazebo>
-<gazebo>
-  <plugin name="ros_control" filename="libgazebo_ros_control.so">
-    <robotNamespace>/rrbot</robotNamespace>
-  </plugin>
-</gazebo>
-<transmission name="tran1">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="leg1joint1"/>
-  <actuator name="motor1">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
-<transmission name="tran2">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="leg1joint2"/>
-  <actuator name="motor2">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
 <robot name="daedalus">    
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/rrbot</robotNamespace>
+    </plugin>
+  </gazebo>
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leg1joint1"/>
+    <actuator name="motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leg1joint2"/>
+    <actuator name="motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
     <link name="chasis">
       <inertial>
         <origin xyz="0 0 0.1" rpy="0 0 0"/>

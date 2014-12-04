@@ -1,6 +1,9 @@
 <?xml version='1.0'?>
 <sdf version="1.4">
-  <model name="daedalus">    
+  <model name="daedalus">
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/rrbot</robotNamespace>
+    </plugin>
     <static>false</static>
     <link name="leg1link0">
       <self_collide>1</self_collide>
